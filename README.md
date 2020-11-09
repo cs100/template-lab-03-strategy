@@ -63,7 +63,7 @@ You must test all the combinations of containers and sorting objects together us
 
 ## Unit Testing
 
-For this lab you are not required to mocks for the different classes, you can instead use the composite classes from your previous lab directly. Because your sort objects are paired with a container, you will also need build and test your container classes before you can build and test your sort classes. Make sure to test all the functions of the container class (except the sort functions) before moving on to developing the sorting classes. The unit tests for the container class may look something like this:
+For this lab you are not required to use mocks for the different classes, you can instead use the composite classes from your previous lab directly. Because your sort objects are paired with a container, you will also need to build and test your container classes before you can build and test your sort classes. Make sure to test all the functions of the container class (except the sort functions) before moving on to developing the sorting classes. The unit tests for the container class may look something like this:
 
 ```c++
 TEST(VectorContainerTestSet, SwapTest) {
