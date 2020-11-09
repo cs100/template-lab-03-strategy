@@ -2,7 +2,7 @@
 
 > Author: Jimmy Tran, Brian Crites ([@brrcrites](https://github.com/brrcrites))
 
-In this lab you will create a strategy pattern for sorting a collection of expression trees by their `evaluate()` value, which you will pair with a different containers to see how strategies can be paired different clients through an interface to create an easily extendable system. This lab requires a completed composite pattern from the previous lab, so you should begin by copying you or your partners code from the previous assignment into your new repo, making sure it compiles correctly, and running your tests to make sure everything is still functioning correctly.
+In this lab you will create a strategy pattern for sorting a collection of expression trees by their `evaluate()` value, which you will pair with different containers to see how strategies can be paired with different clients through an interface to create an easily extendable system. This lab requires a completed composite pattern from the previous lab, so you should begin by copying your or your partner's code from the previous assignment into your new repo, making sure it compiles correctly, and running your tests to make sure everything is still functioning correctly.
 
 ## Container Classes
 
@@ -40,7 +40,7 @@ class Container {
 };
 ```
 
-Notice that our Container abstract base class does not have any actual STL containers because it leaves the impelementation details of the container to the subclasses. You **must use the homogeneous interface above for your sort functions, and you are only allowed to manipulate the containers through this interface, not directly**. This will allow you to extend and change the underlying functionality without having to change anything that interfaces with it.
+Notice that our Container abstract base class does not have any actual STL containers because it leaves the implementation details of the container to the subclasses. You **must use the homogeneous interface above for your sort functions, and you are only allowed to manipulate the containers through this interface, not directly**. This will allow you to extend and change the underlying functionality without having to change anything that interfaces with it.
 
 ## Sorting Classes
 
