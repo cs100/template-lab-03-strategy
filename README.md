@@ -6,7 +6,7 @@ In this lab you will create a strategy pattern for sorting a collection of expre
 
 ## Container Classes
 
-You will start this lab by creating two expression tree containers: one that uses a vector to hold your trees (class `VectorContainer`) and one that uses a standard list (class `ListContainer`). Each of these container classes should be able to hold any amount of different expressions each of which can be of any size. You will implement them both as subclasses of the following `Container` abstract base class, which has been provided to you in container.h. You should create each one independently, creating tests for them using the google test framework before moving on. Each container should be it’s own commit with a proper commit message. Optionally you can create each one as a branch and merge it in once it has been completed.
+You will start this lab by creating two expression tree containers: one that uses a vector to hold your trees (class `VectorContainer`) and one that uses a standard list (class `ListContainer`). Each of these container classes should be able to hold any number of different expressions, each of which can be of any size. You will implement them both as subclasses of the following `Container` abstract base class, which has been provided to you in container.hpp. You should create each one independently, creating tests for them using the google test framework before moving on. Each container should be it’s own commit with a proper commit message. Optionally you can create each one as a branch and merge it in once it has been completed.
 
 ```c++
 class Container {
@@ -57,7 +57,7 @@ class Sort {
 };
 ```
 
-**Note:** your container class requires a reference to your sorting class and vice-versa, a situation known as a circular dependency. Due to the way the C++ compiler works, resolving circular dependencies will require you to use [forward declarations](http://www.umich.edu/~eecs381/handouts/IncompleteDeclarations.pdf) and compile your classes as object files by seperating the class declarations (header) from the class definitions (source) and adding the source files to your CMakeLists.txt. 
+**Note:** your container class requires a pointer to your sorting class and vice-versa, a situation known as a circular dependency. Due to the way the C++ compiler works, resolving circular dependencies will require you to use [forward declarations](http://www.umich.edu/~eecs381/handouts/IncompleteDeclarations.pdf).
 
 You must test all the combinations of containers and sorting objects together using googletest. The following code serves as a basic test for using the SelectionSort class to sort a VectorContainer, but you should create a full test suite for each class and the appropriate class combinations.
 
@@ -94,7 +94,7 @@ TEST(SortTestSet, SelectionSortTest) {
     Add* TreeB = new Add(three, two);
 
     Op* ten = new Op(10);
-    Ope* six = new Op(6);
+    Op* six = new Op(6);
     Sub* TreeC = new Sub(ten, six);
 
     VectorContainer* container = new VectorContainer();
