@@ -1,8 +1,6 @@
 #ifndef __SORT_HPP__
 #define __SORT_HPP__
 
-#include "container.hpp"
-
 class Container;
 
 class Sort {
