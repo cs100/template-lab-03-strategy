@@ -7,6 +7,7 @@ class Base {
     public:
         /* Constructors */
         Base() { };
+        virtual ~Base() {}
 
         /* Pure Virtual Functions */
         virtual double evaluate() = 0;

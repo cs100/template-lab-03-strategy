@@ -15,6 +15,7 @@ class Container {
         /* Constructors */
         Container() : sort_function(nullptr) { };
         Container(Sort* function) : sort_function(function) { };
+        virtual ~Container() {}
 
         /* Non Virtual Functions */
         void set_sort_function(Sort* sort_function_); // set the type of sorting algorithm
